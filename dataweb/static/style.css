@@ -1,0 +1,27 @@
+.topcorner{
+   position:absolute;
+   top:2em;
+   right:3em;
+  }
+
+.bg_nav{
+  background-color:#557bff;
+  padding-bottom:1em;
+}
+
+body{
+  background-color:#F0F0FF
+}
+
+.content{
+  margin-top:1em;
+  margin-left:2em;
+}
+
+.form-control{
+  margin-top:2px;
+}
+
+.flash{
+    color:#AA2222
+}

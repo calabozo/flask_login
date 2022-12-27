@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title%} {{ title }} {% endblock %}
+{% block content%}
+
+<div class="content">
+    {% if current_user.is_authenticated %}
+        <h1>Welcome {{ current_user.username }}</h1>
+        <a href="{{url_for('logout')}}">Logout</a>
+    {% else %}
+        <a href="{{url_for('login')}}">Sign in/Sign Up</a>
+    {% endif %}
+</div>
+<div class="content">
+    <a href="{{url_for('web_sender')}}">Visit this url</a> (Only autenticated users)
+</div>
+{% endblock %}

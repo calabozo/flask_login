@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title%} {{ title }} {% endblock %}
+{% block content%}
+<div class="content">
+    <form action="{{ request.path }}" method="POST" class="card-body">
+        {{ form.csrf_token }}
+        <div>
+            <h3>{{ title }} </h3>
+        </div>
+        <div>
+            {{ form.username(class_="form-control",placeholder="Username")}}
+        </div>
+        <div>
+            {{ form.pwd(class_="form-control",placeholder="Password")}}
+        </div>
+        <div>
+            <button type="submit"> {{ btn_action }}</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
